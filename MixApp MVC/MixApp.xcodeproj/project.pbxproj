@@ -68,13 +68,14 @@
 		844A9DB9253A560700245AFF /* MixApp */ = {
 			isa = PBXGroup;
 			children = (
-				844A9DBA253A560700245AFF /* AppDelegate.swift */,
-				844A9DBC253A560700245AFF /* SceneDelegate.swift */,
+				8463C2DD255080F800CF572E /* AppDelegate */,
+				8463C2DE2550814700CF572E /* SceneDelegate */,
 				846313DC254F41CD00CAC47B /* Model */,
 				844A9DF1253A5D9000245AFF /* ViewControllers */,
+				8463C2DF2550826400CF572E /* SWRevealViewController */,
 				844A9DEC253A5B9500245AFF /* Main.storyboard */,
-				84F72254253BBA8A00EBFE28 /* Assets.xcassets */,
 				844A9DC5253A560700245AFF /* LaunchScreen.storyboard */,
+				84F72254253BBA8A00EBFE28 /* Assets.xcassets */,
 				844A9DC8253A560700245AFF /* Info.plist */,
 			);
 			path = MixApp;
@@ -87,8 +88,6 @@
 				8483C3B1254ED0D300D23991 /* AddItemsVC.swift */,
 				844A9DDB253A59C000245AFF /* StopWatchVC.swift */,
 				844A9DDE253A59C600245AFF /* TimerVC.swift */,
-				84BA2339253C8C3F009A0A5D /* SWRevealViewController.h */,
-				84BA2338253C8C3F009A0A5D /* SWRevealViewController.m */,
 				84BA2337253C8C3F009A0A5D /* MixApp-Bridging-Header.h */,
 			);
 			path = ViewControllers;
@@ -100,6 +99,31 @@
 				844A9DD0253A576900245AFF /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8463C2DD255080F800CF572E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				844A9DBA253A560700245AFF /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		8463C2DE2550814700CF572E /* SceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				844A9DBC253A560700245AFF /* SceneDelegate.swift */,
+			);
+			path = SceneDelegate;
+			sourceTree = "<group>";
+		};
+		8463C2DF2550826400CF572E /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84BA2339253C8C3F009A0A5D /* SWRevealViewController.h */,
+				84BA2338253C8C3F009A0A5D /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
