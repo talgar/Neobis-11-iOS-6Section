@@ -31,7 +31,6 @@ class ToDoListVC: UITableViewController {
         sideMenu()
     }
     
-    
     // MARK: - SideMenuFunc
     
     func sideMenu() {
@@ -126,25 +125,34 @@ class ToDoListVC: UITableViewController {
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
             // Delete the row from the data source
             
             removeItem(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
+        } else if editingStyle == .insert {}
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if changeState(at: indexPath.row) {
+        let index : Int
+        
+        if isFiltering() {
+            let currentItem = filteredToDo[indexPath.row]
+            let currentIndex = toDoItems.firstIndex(where: {$0 === currentItem})
+            index = currentIndex!
+        } else {
+            index = indexPath.row
+        }
+        
+        if changeState(at: index) {
             tableView.cellForRow(at: indexPath)?.imageView?.image = #imageLiteral(resourceName: "check")
         } else {
             tableView.cellForRow(at: indexPath)?.imageView?.image = #imageLiteral(resourceName: "uncheck")
         }
-        saveData()
     }
 
     
@@ -153,7 +161,6 @@ class ToDoListVC: UITableViewController {
         
         moveItem(fromIndex: fromIndexPath.row, toIndex: to.row)
         tableView.reloadData()
-        saveData()
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {

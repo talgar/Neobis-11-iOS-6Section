@@ -68,8 +68,7 @@
 		844A9DB9253A560700245AFF /* MixApp */ = {
 			isa = PBXGroup;
 			children = (
-				8463C2DD255080F800CF572E /* AppDelegate */,
-				8463C2DE2550814700CF572E /* SceneDelegate */,
+				848830FE256744FA00DD19D4 /* Resources */,
 				846313DC254F41CD00CAC47B /* Model */,
 				844A9DF1253A5D9000245AFF /* ViewControllers */,
 				8463C2DF2550826400CF572E /* SWRevealViewController */,
@@ -101,22 +100,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		8463C2DD255080F800CF572E /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				844A9DBA253A560700245AFF /* AppDelegate.swift */,
-			);
-			path = AppDelegate;
-			sourceTree = "<group>";
-		};
-		8463C2DE2550814700CF572E /* SceneDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				844A9DBC253A560700245AFF /* SceneDelegate.swift */,
-			);
-			path = SceneDelegate;
-			sourceTree = "<group>";
-		};
 		8463C2DF2550826400CF572E /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +107,15 @@
 				84BA2338253C8C3F009A0A5D /* SWRevealViewController.m */,
 			);
 			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		848830FE256744FA00DD19D4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				844A9DBA253A560700245AFF /* AppDelegate.swift */,
+				844A9DBC253A560700245AFF /* SceneDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

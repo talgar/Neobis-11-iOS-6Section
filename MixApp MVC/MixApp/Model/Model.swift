@@ -26,6 +26,7 @@ var toDoItems = [Items]()
 
 func addItem(nameItem : String, isCompleted : Bool = false)  {
     toDoItems.append(Items(name: nameItem, completed: isCompleted))
+    saveData()
 }
 
 func removeItem(at Index : Int) {
@@ -37,10 +38,12 @@ func moveItem(fromIndex: Int, toIndex: Int) {
     let from = toDoItems[fromIndex]
     toDoItems.remove(at: fromIndex)
     toDoItems.insert(from, at: toIndex)
+    saveData()
 }
 
 func changeState(at item: Int) -> Bool {
     toDoItems[item].completed = !(toDoItems[item].completed!)
+    saveData()
     return toDoItems[item].completed!
 }
 
